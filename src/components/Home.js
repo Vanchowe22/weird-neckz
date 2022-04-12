@@ -5,20 +5,11 @@ const Home = () => {
     const navigate = useNavigate();
     const { enableWeb3, isAuthenticated, isWeb3Enabled, authenticate, user } = useMoralis();
     const join = () => {
-        console.log(isAuthenticated);
-        if (isAuthenticated) {
-            navigate('/mint');
-            return;
-        }
-
         authenticate()
             .then(data => {
-                console.log(data);
                 navigate('/mint')
             });
-
     };
-    console.log(user);
     return (
         <>
             <div className="App">
@@ -35,7 +26,7 @@ const Home = () => {
                                 <a href="#about">FAQ</a>
                             </div>
                             <a href="#" className="icon js-mobile-menu">
-                                <i className="fa fa-bars"></i>asd
+                                <i className="fa fa-bars"></i>
                             </a>
                         </div>
 
