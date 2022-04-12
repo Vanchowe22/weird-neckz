@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.mint-wrapper {
+    background-color: #431A66;
+    float: left;
+    background-image: url('../images/mint-background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+}
+
+.mint-wrapper img {
+    vertical-align: middle;
+}
+
+.mint-wrapper .description {
+    float: right;
+    width: 40%;
+    padding: 62px 115px 95px 0;
+}
+
+.mint-wrapper .description h2 {
+    font-size: 58px;
+    color: #fff;
+    margin: 0;
+}
+
+.mint-wrapper .description p {
+    padding-top: 42px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mint-wrapper .actions-wrapper {
+    display: inline-block;
+}
+
+.input-wrapper {
+    display: inline-block;
+    background: #fff;
+    border-radius: 100px;
+    text-align: center;
+    width: 30%;
+    padding: 7px;
+    margin-left: 128px;
+}
+
+.input-wrapper .input {
+    vertical-align: middle;
+    border: none;
+    font-size: 36px;
+    width: 50%;
+    text-align: center;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-wrapper input::-webkit-outer-spin-button,
+.input-wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-wrapper input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.actions-wrapper a {
+    vertical-align: text-top;
+    padding: 17px 80px;
+}
+
+@media (max-width: 1000px) {
+    .mint-wrapper {
+        text-align: center;
+        padding: 192px 16px 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .mint-wrapper .description {
+        display: inline-block;
+        float: unset;
+        width: 100%;
+        padding: 0;
+    }
+
+    .mint-wrapper .actions-wrapper {
+        padding-top: 122px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .input-wrapper {
+        width: 50%;
+        margin: 0;
+    }
+
+    .mint-wrapper .description h2 {
+        font-size: 32px;
+    }
+
+    .mint-wrapper .description p {
+        color: #fff;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    .actions-wrapper a {
+        padding: 17px 54px;
+    }
+}
