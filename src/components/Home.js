@@ -1,9 +1,10 @@
 import { useMoralis } from "react-moralis";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "./Header";
 
 const Home = () => {
     const navigate = useNavigate();
-    const { enableWeb3, isAuthenticated, isWeb3Enabled, authenticate, user } = useMoralis();
+    const { authenticate } = useMoralis();
     const join = () => {
         authenticate()
             .then(data => {
@@ -14,38 +15,12 @@ const Home = () => {
         <>
             <div className="App">
                 <section className="section-1">
-                    <div className="mobile-container">
-
-                        <div className="topnav">
-                            <a href="#home" className="active"><img className="mobile-logo" src="/images/logo-white.png" /></a>
-                            <div id="myLinks">
-                                <a href="#news">About Us</a>
-                                <a href="#contact">Roadmap</a>
-                                <a href="#about">How to join</a>
-                                <a href="#about">Team</a>
-                                <a href="#about">FAQ</a>
-                            </div>
-                            <a href="#" className="icon js-mobile-menu">
-                                <i className="fa fa-bars"></i>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div className="header-menu">
-                        <a href="#" className="logo-wrapper">
-                            <img src="/images/logo.png" />
-                        </a>
-                        <a href="#about-us" className="menu-link first">About Us</a>
-                        <a href="#roadmap" className="menu-link">Roadmap</a>
-                        <a href="#how-to-join" className="menu-link">How to join</a>
-                        <a href="#team" className="menu-link">Team</a>
-                        <a href="#" className="menu-link">FAQ</a>
-                    </div>
+                    <Header />
                     <div className="title-wrapper">
                         <p>Welcome to the <b>Weird Neckz</b> playground!</p>
                     </div>
                     <div className="buttons-wrapper">
-                        <Link to={'/mint'} onClick={() => join()} className="btn btn-green">Join Us</Link>
+                        <button onClick={() => join()} className="btn btn-green">Join Us</button>
                     </div>
                 </section>
 
@@ -58,7 +33,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section id="about-us" className="section-3">
+                <section className="section-3">
                     <div className="header">
                         <h2 className="title">What are WeirdNeckz?</h2>
                         <p className="subtitle">These are our most popular NFT’s</p>
