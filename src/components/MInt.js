@@ -26,7 +26,7 @@ const Mint = () => {
                 <div className="actions-wrapper" >
                     <a href="#" className="btn btn-green" onClick={() => mint()}>Mint</a >
                     <div className="input-wrapper" >
-                        <img src="/images/minus.png" onClick={() => setAmount(x => x - 1)} />
+                        <img src="/images/minus.png" onClick={() => setAmount(x => x === 0 ? x = 0 : x - 1)} />
                         <input value={amount} type="number" className="input" onChange={(x) => setAmount(x.target.value)} />
                         <img src="/images/plus.png" onClick={() => setAmount(x => x + 1)} />
                     </div >
