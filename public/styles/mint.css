@@ -105,7 +105,7 @@
         text-shadow: 2px 2px 4px #000000;
     }
 
-    .actions-wrapper a {
+    .actions-wrapper button {
         padding: 17px 54px;
     }
 }

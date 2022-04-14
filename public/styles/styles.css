@@ -8,9 +8,16 @@ a {
 }
 
 .btn {
-    font-size: 32px;
+    font-size: 35px;
     border-radius: 100px;
     border: 0px;
+}
+
+.btn-green:hover {
+    color: #25DAC5;
+    background: #dddddd;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
 }
 
 .btn-green {
@@ -27,7 +34,7 @@ a {
 }
 
 .btn-transparent {
-    border: 2px solid rgba(255,255,255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 17px 26px;
     color: #fff;
     font-size: 20px;

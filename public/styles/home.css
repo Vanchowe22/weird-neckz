@@ -293,3 +293,7 @@
         transform: translateY(0);
     }
 }
+
+.img-slick{
+    margin: 0;
+}

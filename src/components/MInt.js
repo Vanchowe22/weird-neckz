@@ -24,7 +24,7 @@ const Mint = () => {
                 <h2>WeirdNeckz consists of 10,000 Weird collectibles</h2>
                 <p className="info" > The initial collection will not only include cool art, but also work as a membership allowing access to future projects incl.game development, 3d art, experiences and more…</p >
                 <div className="actions-wrapper" >
-                    <a href="#" className="btn btn-green" onClick={() => mint()}>Mint</a >
+                    <button className="btn btn-green" onClick={() => mint()}>Mint</button>
                     <div className="input-wrapper" >
                         <img src="/images/minus.png" onClick={() => setAmount(x => x === 0 ? x = 0 : x - 1)} />
                         <input value={amount} type="number" className="input" onChange={(x) => setAmount(x.target.value)} />

@@ -1,6 +1,7 @@
 import { useMoralis } from "react-moralis";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "./Header";
+import Slider from "react-slick";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -11,6 +12,18 @@ const Home = () => {
                 navigate('/mint')
             });
     };
+
+    const settings = {
+        dots: true,
+        arrows: true,
+        draggable: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 500,
+        useCSS: true,
+        className: 'slick'
+    }
     return (
         <>
             <div className="App">
@@ -39,11 +52,14 @@ const Home = () => {
                         <p className="subtitle">These are our most popular NFT’s</p>
                     </div>
                     <div className="image-slider slick">
-                        <img src="/images/left.png" />
-                        <img src="/images/top.png" />
-                        <img src="/images/right.png" />
-                        <img src="/images/right.png" />
+                        <Slider {...settings}>
+                            <img src="../images/left.png" />
+                            <img src="../images/top.png" />
+                            <img src="../images/right.png" />
+                            <img src="../images/right.png" />
+                        </Slider>
                     </div>
+
                 </section>
 
                 <section id='roadmap' className="section-4">
