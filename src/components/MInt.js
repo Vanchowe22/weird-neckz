@@ -10,7 +10,8 @@ const Mint = () => {
         }
         runContractFunction();
     }
-    const { runContractFunction, isFetching, isLoading } = useWeb3Contract({
+
+    const { runContractFunction } = useWeb3Contract({
         abi: abi,
         contractAddress: contractAddress,
         functionName: 'store',

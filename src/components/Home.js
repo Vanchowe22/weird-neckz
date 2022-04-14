@@ -46,7 +46,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="section-3">
+                <section id="about-us" className="section-3">
                     <div className="header">
                         <h2 className="title">What are WeirdNeckz?</h2>
                         <p className="subtitle">These are our most popular NFT’s</p>
@@ -132,7 +132,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="section-7">
+                <section id="faq" className="section-7">
                     <h2 className="faq-title">FAQ</h2>
                     <div className="content-wrapper">
                         <div className="row-1">
