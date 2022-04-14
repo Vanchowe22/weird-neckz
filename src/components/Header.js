@@ -28,7 +28,7 @@ const Header = ({
                 <a href="#roadmap" className="menu-link">Roadmap</a>
                 <a href="#how-to-join" className="menu-link">How to join</a>
                 <a href="#team" className="menu-link">Team</a>
-                <a href="#" className="menu-link">FAQ</a>
+                <a href="#faq" className="menu-link">FAQ</a>
             </div>
         </>
     );

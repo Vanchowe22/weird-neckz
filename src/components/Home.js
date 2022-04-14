@@ -171,9 +171,9 @@ const Home = () => {
                 <section className="section-8">
                     <div className="footer-wrapper">
                         <div className="footer-menu">
-                            <a href="#">About Us</a>
-                            <a href="#">Roadmap</a>
-                            <a href="#">How to join</a>
+                            <a href="#about-us">About Us</a>
+                            <a href="#roadmap">Roadmap</a>
+                            <a href="#how-to-join">How to join</a>
                         </div>
                         <img className="logo" src="/images/logo-white.png" />
                         <div className="social-links-wrapper">
