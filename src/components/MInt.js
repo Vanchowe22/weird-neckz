@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { abi, contractAddress } from '../constants/contract';
 import isAuth from "../hoc/isAuth";

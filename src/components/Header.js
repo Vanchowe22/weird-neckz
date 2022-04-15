@@ -1,6 +1,4 @@
-const Header = ({
-    join
-}) => {
+const Header = () => {
     return (
         <>
             <div className="mobile-container">
@@ -8,11 +6,11 @@ const Header = ({
                 <div className="topnav">
                     <a href="#home" className="active"><img className="mobile-logo" src="/images/logo-white.png" /></a>
                     <div id="myLinks">
-                        <a href="#about-us">About Us</a>
-                        <a href="#roadmap">Roadmap</a>
-                        <a href="#how-to-join">How to join</a>
-                        <a href="#team">Team</a>
-                        <a href="#faq">FAQ</a>
+                        <a href="#news">About Us</a>
+                        <a href="#contact">Roadmap</a>
+                        <a href="#about">How to join</a>
+                        <a href="#about">Team</a>
+                        <a href="#about">FAQ</a>
                     </div>
                     <a href="#" className="icon js-mobile-menu">
                         <i className="fa fa-bars"></i>
