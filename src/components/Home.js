@@ -1,6 +1,12 @@
 import { useMoralis } from "react-moralis";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "./Header";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -40,14 +46,32 @@ const Home = () => {
                         <p className="subtitle">These are our most popular NFT’s</p>
                     </div>
                     <div className="image-slider slick">
-                        <img src="../images/left.png" />
-                        <img src="../images/top.png" />
-                        <img src="../images/right.png" />
-                        <img src="../images/right.png" />
+                        <Swiper
+                            loop={true}
+                            slidesPerView={3}
+                            navigation={true}
+                            spaceBetween={0}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Pagination, Navigation]}
+                        >
+                            <SwiperSlide>
+                                <img style={{width:'600.5px'}} src="../images/left.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img style={{width:'600.5px'}} src="../images/top.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img style={{width:'600.5px'}} src="../images/right.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img style={{width:'600.5px'}} src="../images/right.png" />
+                            </SwiperSlide>
+
+                        </Swiper>
                     </div>
-
                 </section>
-
                 <section id='roadmap' className="section-4">
                     <div className="title-wrapper">
                         <h2>Roadmap</h2>
