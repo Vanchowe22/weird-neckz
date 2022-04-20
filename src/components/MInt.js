@@ -3,21 +3,27 @@ import { useMoralis, useWeb3Contract } from "react-moralis";
 import { abi, contractAddress } from '../constants/contract';
 import isAuth from "../hoc/isAuth";
 const Mint = () => {
+    const { user } = useMoralis();
     const [amount, setAmount] = useState(0);
-    const mint = () => {
+
+    const mint = async () => {
         if (amount <= 0) {
             return;
         }
-        runContractFunction();
-    }
+        await runContractFunction();
+    };
+
 
     const { runContractFunction } = useWeb3Contract({
         abi: abi,
         contractAddress: contractAddress,
-        functionName: 'store',
+        functionName: 'mint',
         params: {
-            _favoriteNumber: 6
-        }
+            _mintAmount: amount,
+            _to: user.attributes.ethAddress
+        },
+        functionType: 'Mint'
+
     });
     return (
         <section className="mint-wrapper" >
