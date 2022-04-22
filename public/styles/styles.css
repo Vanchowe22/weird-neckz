@@ -7,6 +7,10 @@ a {
     text-decoration: unset;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .btn {
     font-size: 35px;
     border-radius: 100px;
