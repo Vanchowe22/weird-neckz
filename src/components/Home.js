@@ -7,6 +7,7 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/zoom";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -50,23 +51,23 @@ const Home = () => {
                             loop={true}
                             slidesPerView={3}
                             navigation={true}
-                            spaceBetween={0}
+                            spaceBetween={35}
                             pagination={{
                                 clickable: true,
                             }}
                             modules={[Pagination, Navigation]}
                         >
                             <SwiperSlide>
-                                <img style={{width:'600.5px'}} src="../images/left.png" />
+                                <img className="swiper-slide" src="../images/left.png" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img style={{width:'600.5px'}} src="../images/top.png" />
+                                <img className="swiper-slide" src="../images/top.png" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img style={{width:'600.5px'}} src="../images/right.png" />
+                                <img className="swiper-slide" src="../images/right.png" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img style={{width:'600.5px'}} src="../images/right.png" />
+                                <img className="swiper-slide"  src="../images/right.png" />
                             </SwiperSlide>
 
                         </Swiper>
@@ -197,10 +198,6 @@ const Home = () => {
                         <img src="/images/atlas.png" />
                     </div>
                 </section>
-
-                <script src="../scripts/jquery-3.6.0.min.js"></script>
-                <script src="../scripts/slick.min.js"></script>
-                <script src="../scripts/script.js"></script>
             </div >
         </>
     );
