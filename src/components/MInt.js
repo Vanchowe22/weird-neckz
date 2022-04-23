@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { abi, contractAddress } from '../constants/contract';
-import isAuth from "../hoc/isAuth";
+import IsAuth from "../hoc/IsAuth";
 const Mint = () => {
     const { user } = useMoralis();
     const [amount, setAmount] = useState(0);
 
-    const mint = async () => {
+    const mint = () => {
         if (amount <= 0) {
             return;
         }
-        await runContractFunction();
+        runContractFunction();
     };
 
 
@@ -43,4 +43,4 @@ const Mint = () => {
         </section >)
 }
 
-export default isAuth(Mint);
+export default IsAuth(Mint);

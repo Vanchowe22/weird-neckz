@@ -1,15 +1,15 @@
 import { useMoralis } from "react-moralis";
 import { Navigate } from "react-router-dom";
 
-const isAuth = (Component) => {
-    const wrapperComponent = (props) => {
+const IsAuth = (Component) => {
+    const WrapperComponent = (props) => {
         const { isAuthenticated } = useMoralis();
         return isAuthenticated
             ? <Component {...props} />
             : <Navigate to={'/'} />
     }
 
-    return wrapperComponent;
+    return WrapperComponent;
 };
 
-export default isAuth;
+export default IsAuth;
