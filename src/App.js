@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Mint from './components/MInt';
+import Mint from './components/Mint';
 
 function App() {
 	return (
