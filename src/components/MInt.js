@@ -22,7 +22,6 @@ const Mint = () => {
             _mintAmount: amount,
             _to: user.attributes.ethAddress
         },
-        functionType: 'Mint'
 
     });
     return (
