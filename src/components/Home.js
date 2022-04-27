@@ -38,7 +38,7 @@ const Home = () => {
                     <div className="buttons-wrapper">
                         {countdown
                             ? <button onClick={() => join()} className="btn btn-green">Join Us</button>
-                            : <CountdownTimer countdownTimestampMs={1651084252000} didEnd={didEnd} />
+                            : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                     </div>
                 </section>
@@ -128,8 +128,8 @@ const Home = () => {
                 <section id="how-to-join" className="section-5">
                     <div className="actions-wrapper">
                         <h2>How to Join?</h2>
-                        <Link to={'/mint'} onClick={() => join()} className="btn btn-green">Mint</Link>
-                        <a href="#" className="btn btn-transparent">Join Discord</a>
+                        <button onClick={() => join()} className="btn btn-green">Mint</button>
+                        <a href="#" className="btn btn-discord">Join Discord</a>
                     </div>
                 </section>
 

@@ -26,7 +26,7 @@ html {
 
 .btn-green {
     background: #25DAC5;
-    padding: 16px 72px;
+    padding: 16px 65px;
     color: #fff;
 }
 
@@ -37,9 +37,9 @@ html {
     margin-left: 9px;
 }
 
-.btn-transparent {
+.btn-discord {
     border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 17px 26px;
+    padding: 16px 26px;
     color: #fff;
     font-size: 20px;
 }
