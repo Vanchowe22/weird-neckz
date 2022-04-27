@@ -13,11 +13,11 @@ function App() {
 
 	return (
 
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/mint' element={<Mint />} />
-				</Routes>
-			
+		<Routes>
+			<Route path='/' element={<Home />} />
+			<Route path='/mint' element={<Mint />} />
+		</Routes>
+
 	);
 }
 
