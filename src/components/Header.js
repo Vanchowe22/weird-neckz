@@ -4,7 +4,7 @@ const Header = () => {
             <div className="mobile-container">
 
                 <div className="topnav">
-                    <a href="#home" className="active"><img className="mobile-logo" src="/images/logo-white.png" /></a>
+                    <a href="#" className="active"><img className="mobile-logo" src="/images/logo-white.png" /></a>
                     <div id="myLinks">
                         <a href="#news">About Us</a>
                         <a href="#contact">Roadmap</a>

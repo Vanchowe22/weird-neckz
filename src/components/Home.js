@@ -15,7 +15,7 @@ const Home = () => {
     const join = () => {
         authenticate()
             .then(data => {
-                navigate('/mint')
+                navigate('/mint');
             });
     };
 
@@ -51,7 +51,7 @@ const Home = () => {
                             loop={true}
                             slidesPerView={3}
                             navigation={true}
-                            spaceBetween={35}
+                            spaceBetween={20}
                             pagination={{
                                 clickable: true,
                             }}
@@ -67,7 +67,7 @@ const Home = () => {
                                 <img className="swiper-slide" src="../images/right.png" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img className="swiper-slide"  src="../images/right.png" />
+                                <img className="swiper-slide" src="../images/right.png" />
                             </SwiperSlide>
 
                         </Swiper>
@@ -199,6 +199,7 @@ const Home = () => {
                     </div>
                 </section>
             </div >
+
         </>
     );
 };

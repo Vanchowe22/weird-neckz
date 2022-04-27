@@ -1,10 +1,13 @@
-
 .mobile-container {
     display: none;
     margin: auto;
     background-color: #555;
     color: white;
     border-radius: 10px;
+}
+
+.section-1 {
+    background: url("../images/nft.png") no-repeat right;
 }
 
 .topnav {
@@ -203,6 +206,7 @@
         display: flex;
         justify-content: space-evenly;
     }
+
     .section-8 .social-links-wrapper img {
         padding: 0;
     }
