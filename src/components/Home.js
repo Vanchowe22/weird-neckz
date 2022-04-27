@@ -1,4 +1,5 @@
 import { useMoralis } from "react-moralis";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,8 +9,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/zoom";
+import CountdownTimer from "./CountdownTimer";
 
 const Home = () => {
+    const [countdown, setCountdown] = useState(false);
+
+    const didEnd = () => {
+        setCountdown(true);
+    }
+
     const navigate = useNavigate();
     const { authenticate } = useMoralis();
     const join = () => {
@@ -25,10 +33,13 @@ const Home = () => {
                 <section className="section-1">
                     <Header />
                     <div className="title-wrapper">
-                        <p>Welcome to the <b>Weird Neckz</b> playground!</p>
+                        <p>Welcome to the <br /> <b>Weird Neckz</b> playground!</p>
                     </div>
                     <div className="buttons-wrapper">
-                        <button onClick={() => join()} className="btn btn-green">Join Us</button>
+                        {countdown
+                            ? <button onClick={() => join()} className="btn btn-green">Join Us</button>
+                            : <CountdownTimer countdownTimestampMs={1651084252000} didEnd={didEnd} />
+                        }
                     </div>
                 </section>
 
