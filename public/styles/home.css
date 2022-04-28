@@ -53,7 +53,7 @@
 }
 
 .section-3 {
-    padding-top: 30px;
+    padding-top: 50px;
     background-color: #431A66;
 }
 
@@ -72,6 +72,7 @@
 
 .section-3 .image-slider {
     text-align: center;
+    margin-right: 22px;
 }
 
 .section-4 {
@@ -120,7 +121,7 @@
     align-items: center;
 }
 
-.section-5 .actions-wrapper h2 {
+.section-5 .actions-wrapper h2{
     font-size: 64px;
     color: #fff;
     margin: 0;
@@ -131,7 +132,7 @@
     margin-left: 208px;
 }
 
-.section-5 .actions-wrapper .btn-discord {
+.section-5 .actions-wrapper .btn-transparent {
     margin-left: 30px;
 }
 
@@ -296,16 +297,4 @@
 
 .img-slick {
     width: 650px;
-}
-
-.swiper-button-next::after {
-    color: white;
-}
-
-.swiper-button-prev::after {
-    color: white;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #fff !important;
 }

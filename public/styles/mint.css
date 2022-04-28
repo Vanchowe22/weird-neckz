@@ -31,7 +31,7 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-.mint-wrapper .actions-wrapper {
+.mint-wrapper .actions-wrapperr {
     display: inline-block;
 }
 
@@ -48,7 +48,7 @@
 .input-wrapper .input {
     vertical-align: middle;
     border: none;
-    font-size: 36px;
+    font-size: 37px;
     width: 50%;
     text-align: center;
     -webkit-appearance: none;
@@ -65,6 +65,10 @@
     -moz-appearance: textfield;
 }
 
+.actions-wrapperr a {
+    vertical-align: text-top;
+    padding: 17px 80px;
+}
 
 @media (max-width: 1000px) {
     .mint-wrapper {
@@ -81,7 +85,7 @@
         padding: 0;
     }
 
-    .mint-wrapper .actions-wrapper {
+    .mint-wrapper .actions-wrapperr {
         padding-top: 122px;
         display: flex;
         justify-content: space-evenly;
@@ -101,4 +105,7 @@
         text-shadow: 2px 2px 4px #000000;
     }
 
+    .actions-wrapperr a {
+        padding: 17px 54px;
+    }
 }

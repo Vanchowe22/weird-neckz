@@ -12,22 +12,20 @@ html {
 }
 
 .btn {
-    font-size: 35px;
+    font-size: 18px;
     border-radius: 100px;
-    border: 0px;
 }
 
-.btn-green:hover {
-    color: #25DAC5;
-    background: #dddddd;
-    transition: all 0.2s ease 0s;
-    cursor: pointer;
+.btn-join{
+    padding: 20px 80px !important;
+    font-size: 28px !important;
 }
 
 .btn-green {
     background: #25DAC5;
-    padding: 16px 65px;
+    padding: 17px 54px;
     color: #fff;
+    border: none;
 }
 
 .btn-outline {
@@ -37,9 +35,9 @@ html {
     margin-left: 9px;
 }
 
-.btn-discord {
+.btn-transparent {
     border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 16px 26px;
+    padding: 17px 26px;
     color: #fff;
     font-size: 20px;
 }
