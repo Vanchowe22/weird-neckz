@@ -1,13 +1,10 @@
+
 .mobile-container {
     display: none;
     margin: auto;
     background-color: #555;
     color: white;
     border-radius: 10px;
-}
-
-.section-1 {
-    background: url("../images/nft.png") no-repeat right;
 }
 
 .topnav {
@@ -17,7 +14,7 @@
 }
 
 .topnav #myLinks {
-    display: none;
+    display: block;
 }
 
 .topnav a {
@@ -57,7 +54,7 @@
 
     .section-1 {
         padding: 0;
-        background: #f8f8f8;
+        background: white;
     }
 
     .section-1 .title-wrapper {
@@ -129,33 +126,12 @@
     .section-5 .actions-wrapper h2 {
         font-size: 42px;
     }
-
     .section-6 {
-        padding: 32px 0;
-    }
-
-    .section-6 .description {
-        padding: 32px 0;
-    }
-
-    .section-6 .profiles-wrapper {
-        margin: 0;
-    }
-
-    .section-6 .profile {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .section-6 .profile.bordered {
-        border-left: none;
-        border-right: none;
-        border-top: 2px solid #EBEAED;
-        border-bottom: 2px solid #EBEAED;
+        display: none;
     }
 
     .section-7 .faq-title {
-        padding-top: 0;
+        padding-top: 50px;
     }
 
     .section-7 .content-wrapper {
@@ -206,7 +182,6 @@
         display: flex;
         justify-content: space-evenly;
     }
-
     .section-8 .social-links-wrapper img {
         padding: 0;
     }

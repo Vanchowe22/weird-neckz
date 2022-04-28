@@ -1,18 +1,27 @@
+import { useState } from "react";
+
 const Header = () => {
+    const [toogle, setToogle] = useState(false);
+
     return (
         <>
             <div className="mobile-container">
 
                 <div className="topnav">
                     <a href="#" className="active"><img className="mobile-logo" src="/images/logo-white.png" /></a>
-                    <div id="myLinks">
-                        <a href="#news">About Us</a>
-                        <a href="#contact">Roadmap</a>
-                        <a href="#about">How to join</a>
-                        <a href="#about">Team</a>
-                        <a href="#about">FAQ</a>
-                    </div>
-                    <a href="#" className="icon js-mobile-menu">
+                    {
+                        toogle
+                            ? <div id="myLinks">
+                                <a href="#news">About Us</a>
+                                <a href="#contact">Roadmap</a>
+                                <a href="#about">How to join</a>
+                                <a href="#about">Team</a>
+                                <a href="#about">FAQ</a>
+                            </div>
+                            : ''
+                    }
+
+                    <a href="#" onClick={() => toogle ? setToogle(false) : setToogle(true)} className="icon js-mobile-menu">
                         <i className="fa fa-bars"></i>
                     </a>
                 </div>
