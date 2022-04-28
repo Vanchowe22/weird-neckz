@@ -17,11 +17,12 @@ const Home = () => {
     const didEnd = () => {
         setCountdown(true);
     }
+    const message = `Hi there from the Weird Neckz! Sign this message to prove you own this wallet and we'll log you in. This won't cost you any Ether.`
 
     const navigate = useNavigate();
     const { authenticate } = useMoralis();
     const join = () => {
-        authenticate()
+        authenticate({ signingMessage: message })
             .then(data => {
                 navigate('/mint');
             });
@@ -37,7 +38,7 @@ const Home = () => {
                     </div>
                     <div className="buttons-wrapper">
                         {countdown
-                            ? <button onClick={() => join()} className="btn btn-green">Join Us</button>
+                            ? <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                     </div>
@@ -57,12 +58,12 @@ const Home = () => {
                         <h2 className="title">What are WeirdNeckz?</h2>
                         <p className="subtitle">These are our most popular NFT’s</p>
                     </div>
-                    <div className="image-slider slick">
+                    <div className="slick">
                         <Swiper
                             loop={true}
                             slidesPerView={3}
                             navigation={true}
-                            spaceBetween={20}
+                            spaceBetween={25}
                             pagination={{
                                 clickable: true,
                             }}
@@ -128,8 +129,8 @@ const Home = () => {
                 <section id="how-to-join" className="section-5">
                     <div className="actions-wrapper">
                         <h2>How to Join?</h2>
-                        <button onClick={() => join()} className="btn btn-green">Mint</button>
-                        <a href="#" className="btn btn-discord">Join Discord</a>
+                        <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
+                        <a href="#" className="btn btn-transparent">Join Discord</a>
                     </div>
                 </section>
 
