@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useMoralis, useWeb3Contract } from "react-moralis";
+import { useWeb3Contract } from "react-moralis";
 import { Link } from "react-router-dom";
 import { abi, contractAddress } from '../constants/contract';
 import IsAuth from "../hoc/IsAuth";
 const Mint = () => {
-    const { user } = useMoralis();
     const [amount, setAmount] = useState(0);
 
     const mint = () => {
@@ -20,7 +19,6 @@ const Mint = () => {
         functionName: 'mint',
         params: {
             _mintAmount: amount,
-            _to: user.attributes.ethAddress
         },
 
     });

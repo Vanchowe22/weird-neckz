@@ -117,27 +117,20 @@ export const abi = [
     {
         "inputs": [
             {
-                "internalType": "address[100]",
-                "name": "_users",
-                "type": "address[100]"
-            }
-        ],
-        "name": "add100PresaleUsers",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "address",
-                "name": "_user",
+                "name": "",
                 "type": "address"
             }
         ],
-        "name": "addPresaleUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "name": "addressMintedBalance",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -260,6 +253,25 @@ export const abi = [
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
+            }
+        ],
+        "name": "isWhitelisted",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "maxMintAmount",
         "outputs": [
@@ -288,11 +300,6 @@ export const abi = [
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "_to",
-                "type": "address"
-            },
-            {
                 "internalType": "uint256",
                 "name": "_mintAmount",
                 "type": "uint256"
@@ -311,6 +318,45 @@ export const abi = [
                 "internalType": "string",
                 "name": "",
                 "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "nftPerAddressLimit",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "notRevealedUri",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "onlyWhitelisted",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
             }
         ],
         "stateMutability": "view",
@@ -372,64 +418,6 @@ export const abi = [
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "presaleCost",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "name": "presaleWallets",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
-            }
-        ],
-        "name": "removePresaleUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
-            }
-        ],
-        "name": "removeWhitelistUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -551,11 +539,24 @@ export const abi = [
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_newCost",
+                "name": "_limit",
                 "type": "uint256"
             }
         ],
-        "name": "setPresaleCost",
+        "name": "setNftPerAddressLimit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bool",
+                "name": "_state",
+                "type": "bool"
+            }
+        ],
+        "name": "setOnlyWhitelisted",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -738,12 +739,12 @@ export const abi = [
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
+                "internalType": "address[]",
+                "name": "_users",
+                "type": "address[]"
             }
         ],
-        "name": "whitelistUser",
+        "name": "whitelistUsers",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -751,17 +752,17 @@ export const abi = [
     {
         "inputs": [
             {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "whitelistedAddresses",
+        "outputs": [
+            {
                 "internalType": "address",
                 "name": "",
                 "type": "address"
-            }
-        ],
-        "name": "whitelisted",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
             }
         ],
         "stateMutability": "view",
@@ -775,4 +776,4 @@ export const abi = [
         "type": "function"
     }
 ];
-export const contractAddress = '0xc35c219dDeE844101f9322b0fdEB410b2998F162';
+export const contractAddress = '0x7fbe490a69be75af4cc444c3e2c3af13384b28e5';
