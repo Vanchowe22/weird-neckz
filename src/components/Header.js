@@ -12,11 +12,11 @@ const Header = () => {
                     {
                         toogle
                             ? <div id="myLinks">
-                                <a href="#news">About Us</a>
-                                <a href="#contact">Roadmap</a>
-                                <a href="#about">How to join</a>
-                                <a href="#about">Team</a>
-                                <a href="#about">FAQ</a>
+                                <a href="#about-us">About Us</a>
+                                <a href="#roadmap">Roadmap</a>
+                                <a href="#how-to-join">How to join</a>
+                                <a href="#team">Team</a>
+                                <a href="#faq">FAQ</a>
                             </div>
                             : ''
                     }
