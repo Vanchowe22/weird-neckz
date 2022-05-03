@@ -46,8 +46,12 @@ const Home = () => {
                     <div className="buttons-wrapper">
                         {countdown
                             ? isMobileDevice()
-                                ? <a href={metamaskAppDeepLink} className="btn btn-join btn-green">Join Us</a>
-                                : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Usss</Link>
+                                ? !window.ethereum
+                                    ? <a href={metamaskAppDeepLink} className="btn btn-join btn-green">Log in with Metamask</a>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
+                                : !window.ethereum
+                                    ? <a href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn' className="btn btn-join btn-green">Install Metamask</a>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                     </div>
