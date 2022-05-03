@@ -16,7 +16,7 @@ import { isMobileDevice } from "../Utils/functions";
 const Home = () => {
     const [countdown, setCountdown] = useState(false);
 
-    const dappUrl = "https://weird-neckz.web.app";
+    const dappUrl = "weird-neckz.web.app";
     const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
 
     const didEnd = () => {
