@@ -47,10 +47,10 @@ const Home = () => {
                         {countdown
                             ? isMobileDevice()
                                 ? !window.ethereum
-                                    ? <a href={metamaskAppDeepLink} className="btn btn-join btn-green">Log in with Metamask</a>
+                                    ? <a target={'_blank'} href={metamaskAppDeepLink} className="btn btn-join btn-green">Install Metamask</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                                 : !window.ethereum
-                                    ? <a href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn' className="btn btn-join btn-green">Install Metamask</a>
+                                    ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Log in with Metamask</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
