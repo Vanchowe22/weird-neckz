@@ -68,6 +68,7 @@
 
 .section-3 .header .subtitle {
     font-size: 22px;
+    margin-bottom: -25px;
 }
 
 .section-3 .image-slider {
@@ -121,7 +122,7 @@
     align-items: center;
 }
 
-.section-5 .actions-wrapper h2{
+.section-5 .actions-wrapper h2 {
     font-size: 64px;
     color: #fff;
     margin: 0;

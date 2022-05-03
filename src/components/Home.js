@@ -3,24 +3,31 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, A11y } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/zoom";
 import CountdownTimer from "./CountdownTimer";
+import { isMobileDevice } from "../Utils/functions";
+
 
 const Home = () => {
     const [countdown, setCountdown] = useState(false);
+
+    const dappUrl = "http://192.168.1.24.sslip.io:3000";
+    const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
 
     const didEnd = () => {
         setCountdown(true);
     }
     const message = `Hi there from the Weird Neckz! Sign this message to prove you own this wallet and we'll log you in. This won't cost you any Ether.`
 
+
     const navigate = useNavigate();
     const { authenticate } = useMoralis();
+
     const join = () => {
         authenticate({ signingMessage: message })
             .then(data => {
@@ -38,7 +45,9 @@ const Home = () => {
                     </div>
                     <div className="buttons-wrapper">
                         {countdown
-                            ? <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
+                            ? isMobileDevice()
+                                ? <a href={metamaskAppDeepLink} className="btn btn-join btn-green">Join Us</a>
+                                : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                     </div>
@@ -58,16 +67,19 @@ const Home = () => {
                         <h2 className="title">What are WeirdNeckz?</h2>
                         <p className="subtitle">These are our most popular NFT’s</p>
                     </div>
-                    <div className="slick">
+                    <div className={"slick"}>
                         <Swiper
                             loop={true}
                             slidesPerView={3}
                             navigation={true}
                             spaceBetween={25}
+                            watchOverflow={true}
+                            observer={true}
+                            observeParents={true}
                             pagination={{
                                 clickable: true,
                             }}
-                            modules={[Pagination, Navigation]}
+                            modules={[Pagination, Navigation, A11y]}
                         >
                             <SwiperSlide>
                                 <img className="swiper-slide" src="../images/left.png" />
@@ -129,7 +141,9 @@ const Home = () => {
                 <section id="how-to-join" className="section-5">
                     <div className="actions-wrapper">
                         <h2>How to Join?</h2>
-                        <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
+                        {isMobileDevice()
+                            ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
+                            : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>}
                         <a href="#" className="btn btn-transparent">Join Discord</a>
                     </div>
                 </section>

@@ -9,7 +9,7 @@
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
     position: relative;
 }
 
@@ -18,10 +18,11 @@
 }
 
 .topnav a {
-    color: white;
+    color: black;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    text-align: center;
     display: block;
 }
 
@@ -188,5 +189,13 @@
 
     .section-8 .copyright-wrapper {
         padding: 32px 0;
+    }
+
+    .swiper-button-next {
+        display: none !important;
+    }
+
+    .swiper-button-prev {
+        display: none !important;
     }
 }
