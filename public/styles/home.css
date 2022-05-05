@@ -167,7 +167,9 @@
 
 .section-6 .profile {
     display: inline-block;
-    padding: 66px 198px 66px 198px;
+    width: 33%;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .section-6 .profile.bordered {

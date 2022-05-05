@@ -16,7 +16,7 @@ import { isMobileDevice } from "../Utils/functions";
 const Home = () => {
     const [countdown, setCountdown] = useState(false);
 
-    const dappUrl = "weird-neckz.web.app";
+    const dappUrl = "192.168.1.24.sslip.io:3000";
     const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
 
     const didEnd = () => {
@@ -47,10 +47,10 @@ const Home = () => {
                         {countdown
                             ? isMobileDevice()
                                 ? !window.ethereum
-                                    ? <a target={'_blank'} href={metamaskAppDeepLink} className="btn btn-join btn-green">Install Metamask</a>
+                                    ? <a target={'_blank'} href={metamaskAppDeepLink} className="btn btn-join btn-login btn-green">Log in with Metamask</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                                 : !window.ethereum
-                                    ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Log in with Metamask</a>
+                                    ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Install Metamask</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
