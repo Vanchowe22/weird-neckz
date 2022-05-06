@@ -15,6 +15,8 @@ import { isMobileDevice } from "../Utils/functions";
 
 const Home = () => {
     const [countdown, setCountdown] = useState(false);
+    const navigate = useNavigate();
+    const { authenticate } = useMoralis();
 
     const dappUrl = "192.168.1.24.sslip.io:3000";
     const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
@@ -25,18 +27,22 @@ const Home = () => {
     const message = `Hi there from the Weird Neckz! Sign this message to prove you own this wallet and we'll log you in. This won't cost you any Ether.`
 
 
-    const navigate = useNavigate();
-    const { authenticate } = useMoralis();
 
     const join = () => {
         authenticate({ signingMessage: message })
             .then(data => {
                 navigate('/mint');
+            })
+            .catch(err => {
+                if (err.code === 4001) {
+                    alert('rejected')
+                }
             });
     };
 
     return (
         <>
+            Testing...
             <div className="App">
                 <section id="start" className="section-1">
                     <Header />
@@ -48,10 +54,10 @@ const Home = () => {
                             ? isMobileDevice()
                                 ? !window.ethereum
                                     ? <a target={'_blank'} href={metamaskAppDeepLink} className="btn btn-join btn-login btn-green">Log in with Metamask</a>
-                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green disabled">Join Us</Link>
                                 : !window.ethereum
                                     ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Install Metamask</a>
-                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green disabled">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                     </div>
@@ -145,11 +151,13 @@ const Home = () => {
                 <section id="how-to-join" className="section-5">
                     <div className="actions-wrapper">
                         <h2>How to Join?</h2>
-                        {window.ethereum
-                            ? isMobileDevice()
-                                ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
-                                : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
-                            : <a href="#start" className="btn btn-green">Mint</a>
+                        {countdown
+                            ? window.ethereum
+                                ? isMobileDevice()
+                                    ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-green disabled">Mint</Link>
+                                : <a href="#start" className="btn btn-green">Mint</a>
+                            : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                         <a href="#" className="btn btn-transparent">Join Discord</a>
                     </div>
