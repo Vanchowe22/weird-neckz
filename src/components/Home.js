@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <>
             <div className="App">
-                <section className="section-1">
+                <section id="start" className="section-1">
                     <Header />
                     <div className="title-wrapper">
                         <p>Welcome to the <br /> <b>Weird Neckz</b> playground!</p>
@@ -145,9 +145,12 @@ const Home = () => {
                 <section id="how-to-join" className="section-5">
                     <div className="actions-wrapper">
                         <h2>How to Join?</h2>
-                        {isMobileDevice()
-                            ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
-                            : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>}
+                        {window.ethereum
+                            ? isMobileDevice()
+                                ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
+                                : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
+                            : <a href="#start" className="btn btn-green">Mint</a>
+                        }
                         <a href="#" className="btn btn-transparent">Join Discord</a>
                     </div>
                 </section>
