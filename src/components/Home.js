@@ -54,10 +54,10 @@ const Home = () => {
                             ? isMobileDevice()
                                 ? !window.ethereum
                                     ? <a target={'_blank'} href={metamaskAppDeepLink} className="btn btn-join btn-login btn-green">Log in with Metamask</a>
-                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green disabled">Join Us</Link>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                                 : !window.ethereum
                                     ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Install Metamask</a>
-                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green disabled">Join Us</Link>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }
                     </div>
@@ -155,7 +155,7 @@ const Home = () => {
                             ? window.ethereum
                                 ? isMobileDevice()
                                     ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
-                                    : <Link to={"/"} onClick={() => join()} className="btn btn-green disabled">Mint</Link>
+                                    : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
                                 : <a href="#start" className="btn btn-green">Mint</a>
                             : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
                         }

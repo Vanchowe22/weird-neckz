@@ -301,8 +301,3 @@
 .img-slick {
     width: 650px;
 }
-
-a.disabled {
-    pointer-events: none;
-    cursor: default;
-}
