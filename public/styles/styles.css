@@ -16,7 +16,7 @@ html {
     border-radius: 100px;
 }
 
-.btn-join{
+.btn-join {
     padding: 20px 80px !important;
     font-size: 28px !important;
 }
@@ -40,4 +40,12 @@ html {
     padding: 17px 26px;
     color: #fff;
     font-size: 20px;
+}
+
+.countdown-timer {
+    padding-bottom: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 160px;
+    color: #000000;
 }

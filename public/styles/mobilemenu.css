@@ -77,6 +77,10 @@
         width: 35px;
     }
 
+    .countdown-timer{
+        font-size: 77px;
+    }
+
     .buttons-wrapper {
         display: flex;
         justify-content: space-around;

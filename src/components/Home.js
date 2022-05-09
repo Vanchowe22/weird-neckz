@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/zoom";
+
 import CountdownTimer from "./CountdownTimer";
 import { isMobileDevice } from "../Utils/functions";
 
@@ -29,27 +30,24 @@ const Home = () => {
 
 
     const join = () => {
-        authenticate({ signingMessage: message })
+        authenticate({ signingMessage: message, throwOnError: true })
             .then(data => {
                 navigate('/mint');
             })
             .catch(err => {
-                if (err.code === 4001) {
-                    alert('rejected')
-                }
-            });
+                console.error(err);
+            })
     };
 
     return (
         <>
-            Testing...
             <div className="App">
                 <section id="start" className="section-1">
                     <Header />
                     <div className="title-wrapper">
                         <p>Welcome to the <br /> <b>Weird Neckz</b> playground!</p>
                     </div>
-                    <div className="buttons-wrapper">
+                    <div className={countdown ? "buttons-wrapper" : 'countdown-timer'}>
                         {countdown
                             ? isMobileDevice()
                                 ? !window.ethereum
@@ -58,7 +56,8 @@ const Home = () => {
                                 : !window.ethereum
                                     ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Install Metamask</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
-                            : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
+                            : <> <CountdownTimer countdownTimestampMs={1651961791000} didEnd={didEnd} />
+                            </>
                         }
                     </div>
                 </section>
@@ -157,7 +156,7 @@ const Home = () => {
                                     ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
                                 : <a href="#start" className="btn btn-green">Mint</a>
-                            : <CountdownTimer countdownTimestampMs={1651098697000} didEnd={didEnd} />
+                            : <CountdownTimer countdownTimestampMs={1651961791000} didEnd={didEnd} />
                         }
                         <a href="#" className="btn btn-transparent">Join Discord</a>
                     </div>

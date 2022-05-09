@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { useWeb3Contract } from "react-moralis";
+import { useMoralis, useWeb3Contract } from "react-moralis";
 import { Link } from "react-router-dom";
 import { abi, contractAddress } from '../constants/contract';
 import IsAuth from "../hoc/IsAuth";
+
 const Mint = () => {
     const [amount, setAmount] = useState(0);
+    const { user } = useMoralis();
 
     const mint = () => {
         if (amount <= 0) {
@@ -18,6 +20,7 @@ const Mint = () => {
         contractAddress: contractAddress,
         functionName: 'mint',
         params: {
+            _to: user.attributes.ethAddress,
             _mintAmount: amount,
         },
 
