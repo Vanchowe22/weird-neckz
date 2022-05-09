@@ -300,6 +300,11 @@ export const abi = [
     {
         "inputs": [
             {
+                "internalType": "address",
+                "name": "_to",
+                "type": "address"
+            },
+            {
                 "internalType": "uint256",
                 "name": "_mintAmount",
                 "type": "uint256"
@@ -325,25 +330,12 @@ export const abi = [
     },
     {
         "inputs": [],
-        "name": "nftPerAddressLimit",
+        "name": "nftsPerAddressLimit",
         "outputs": [
             {
                 "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "notRevealedUri",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
             }
         ],
         "stateMutability": "view",
@@ -775,5 +767,5 @@ export const abi = [
         "stateMutability": "payable",
         "type": "function"
     }
-];
-export const contractAddress = '0x7fbe490a69be75af4cc444c3e2c3af13384b28e5';
+]
+export const contractAddress = '0x3Eed8d4dF278d396CcDc75C331754cBDE2D72787';
