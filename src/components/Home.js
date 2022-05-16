@@ -170,15 +170,15 @@ const Home = () => {
                     <div className="profiles-wrapper">
                         <div className="profile">
                             <img src="/images/user1.png" />
-                            <h2>Name</h2>
+                            <h2>Kristian Stoilov</h2>
                         </div>
                         <div className="profile bordered">
                             <img src="/images/user2.png" />
-                            <h2>Name</h2>
+                            <h2>Evgeni Petrov</h2>
                         </div>
                         <div className="profile">
                             <img src="/images/user3.png" />
-                            <h2>Name</h2>
+                            <h2>Ivan Kodzhabashev</h2>
                         </div>
                     </div>
                 </section>
