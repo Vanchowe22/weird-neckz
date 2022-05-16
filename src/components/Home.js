@@ -34,9 +34,6 @@ const Home = () => {
             .then(data => {
                 navigate('/mint');
             })
-            .catch(err => {
-                console.error(err);
-            })
     };
 
     return (
@@ -170,15 +167,15 @@ const Home = () => {
                     <div className="profiles-wrapper">
                         <div className="profile">
                             <img src="/images/user1.png" />
-                            <h2>Kristian Stoilov</h2>
+                            <h2>KS</h2>
                         </div>
                         <div className="profile bordered">
                             <img src="/images/user2.png" />
-                            <h2>Evgeni Petrov</h2>
+                            <h2>EP</h2>
                         </div>
                         <div className="profile">
                             <img src="/images/user3.png" />
-                            <h2>Ivan Kodzhabashev</h2>
+                            <h2>IK</h2>
                         </div>
                     </div>
                 </section>
