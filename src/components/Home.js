@@ -33,8 +33,11 @@ const Home = () => {
         authenticate({ signingMessage: message, throwOnError: true })
             .then(data => {
                 navigate('/mint');
-            })
+            }).catch(err => {
+                alert('Rejected')
+            });
     };
+
 
     return (
         <>
@@ -42,7 +45,7 @@ const Home = () => {
                 <section id="start" className="section-1">
                     <Header />
                     <div className="title-wrapper">
-                        <p>Welcome to the <br /> <b>Weird Neckz</b> playground!</p>
+                        <p>Welcome to the<br /> <b>Weird Neckz</b> playground!</p>
                     </div>
                     <div className={countdown ? "buttons-wrapper" : 'countdown-timer'}>
                         {countdown
@@ -53,7 +56,7 @@ const Home = () => {
                                 : !window.ethereum
                                     ? <a target={'_blank'} href='https://metamask.io/' className="btn btn-join btn-login btn-green">Install Metamask</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-join btn-green">Join Us</Link>
-                            : <> <CountdownTimer countdownTimestampMs={1651961791000} didEnd={didEnd} />
+                            : <> <CountdownTimer countdownTimestampMs={1656185925000} didEnd={didEnd} />
                             </>
                         }
                     </div>
@@ -153,9 +156,9 @@ const Home = () => {
                                     ? <a href={metamaskAppDeepLink} className="btn btn-green">Mint</a>
                                     : <Link to={"/"} onClick={() => join()} className="btn btn-green">Mint</Link>
                                 : <a href="#start" className="btn btn-green">Mint</a>
-                            : <CountdownTimer countdownTimestampMs={1651961791000} didEnd={didEnd} />
+                            : <CountdownTimer countdownTimestampMs={1656185925000} didEnd={didEnd} isHowToJoin={true} />
                         }
-                        <a href="#" className="btn btn-transparent">Join Discord</a>
+                        <a href="https://discord.gg/McBQWWcwHc" className="btn btn-transparent">Join Discord</a>
                     </div>
                 </section>
 

@@ -9,7 +9,7 @@ const defaultRemainingTime = {
     days: '00'
 }
 
-const CountdownTimer = ({ countdownTimestampMs, didEnd }) => {
+const CountdownTimer = ({ countdownTimestampMs, didEnd, isHowToJoin }) => {
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -23,7 +23,7 @@ const CountdownTimer = ({ countdownTimestampMs, didEnd }) => {
     }
 
     return (
-        <>
+        <div className={isHowToJoin?'how-to-timer': ''}>
             <span>{remainingTime.days}</span>
             <span>:</span>
             <span className="two-numbers">{remainingTime.hours}</span>
@@ -31,7 +31,7 @@ const CountdownTimer = ({ countdownTimestampMs, didEnd }) => {
             <span className="two-numbers">{remainingTime.minutes}</span>
             <span>:</span>
             <span className="two-numbers">{remainingTime.seconds}</span>
-        </>
+        </div>
     );
 }
 
