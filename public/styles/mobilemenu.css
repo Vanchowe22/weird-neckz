@@ -70,7 +70,6 @@
         color: #333;
         font-size: 48px;
         width: 100%;
-        text-align: center;
     }
 
     .mobile-logo {
@@ -78,7 +77,8 @@
     }
 
     .countdown-timer {
-        font-size: 77px;
+        font-size: 70px;
+        text-align: center;
     }
 
     .buttons-wrapper {
@@ -211,5 +211,9 @@
 
     .swiper-button-prev {
         display: none !important;
+    }
+    .how-to-timer {
+        margin: 32px 0 0;
+        color: white;
     }
 }
