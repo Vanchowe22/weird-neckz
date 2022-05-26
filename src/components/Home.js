@@ -71,7 +71,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section id="about-us" className="section-3">
+                <section id="gallery" className="section-3">
                     <div className="header">
                         <h2 className="title">What are WeirdNeckz?</h2>
                         <p className="subtitle">These are our most popular NFT’s</p>
@@ -91,13 +91,25 @@ const Home = () => {
                             modules={[Pagination, Navigation, A11y]}
                         >
                             <SwiperSlide>
-                                <img className="swiper-slide" src="../images/left.png" />
+                                <img className="swiper-slide" src="../images/12.png" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img className="swiper-slide" src="../images/top.png" />
+                                <img className="swiper-slide" src="../images/26.png" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img className="swiper-slide" src="../images/right.png" />
+                                <img className="swiper-slide" src="../images/27.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className="swiper-slide" src="../images/54.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className="swiper-slide" src="../images/55.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className="swiper-slide" src="../images/68.png" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className="swiper-slide" src="../images/92.png" />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <img className="swiper-slide" src="../images/right.png" />
@@ -111,9 +123,9 @@ const Home = () => {
                         <h2>Roadmap</h2>
                         <p className="slide-up">The launch takes place in 3 rounds
                             With each round the price goes higher
-                            Round 1 (pre-sale) – Available 3333 whitelist spots – 0,05 eth
-                            Round 2 ( early public sale) – Available 3333 NFTs – 0.075 eth
-                            Round 3 ( late public sale ) – Available 3333 NFTs – 0.1 eth
+                            <br />Round 1 (pre-sale) – Available 700 whitelist spots (3 NFTs per spot) – 0,08 eth
+                            <br />Round 2 ( early public sale) – Available 4000 NFTs – 0.1 eth
+                            <br />Round 3 ( late public sale ) – Available 3900 NFTs – 0.15 eth.
                         </p>
                     </div>
                     <div className="content-wrapper">
@@ -143,7 +155,7 @@ const Home = () => {
                     </div>
                     <div className="content-wrapper">
                         <h2>50%</h2>
-                        <p className="slide-up">A major giveaway will be made including announcements for future projects and whitelist spots</p>
+                        <p className="slide-up">A major giveaway will be made including announcements<br /> for future projects and whitelist spots</p>
                     </div>
                 </section>
 
@@ -222,7 +234,7 @@ const Home = () => {
                 <section className="section-8">
                     <div className="footer-wrapper">
                         <div className="footer-menu">
-                            <a href="#about-us">About Us</a>
+                            <a href="#gallery">Gallery</a>
                             <a href="#roadmap">Roadmap</a>
                             <a href="#how-to-join">How to join</a>
                         </div>

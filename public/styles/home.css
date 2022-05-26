@@ -80,7 +80,7 @@
     padding-left: 115px;
     padding-top: 120px;
     padding-bottom: 120px;
-    background: url("../images/face.png") no-repeat fixed right;
+    background: url("../images/face.png") no-repeat right;
     background-size: contain;
 }
 

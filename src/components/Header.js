@@ -12,7 +12,7 @@ const Header = () => {
                     {
                         toogle
                             ? <div id="myLinks">
-                                <a href="#about-us">About Us</a>
+                                <a href="#gallery">Gallery</a>
                                 <a href="#roadmap">Roadmap</a>
                                 <a href="#how-to-join">How to join</a>
                                 <a href="#team">Team</a>
@@ -31,7 +31,7 @@ const Header = () => {
                 <a href="#" className="logo-wrapper">
                     <img src="/images/logo.png" />
                 </a>
-                <a href="#about-us" className="menu-link first">About Us</a>
+                <a href="#gallery" className="menu-link first">Gallery</a>
                 <a href="#roadmap" className="menu-link">Roadmap</a>
                 <a href="#how-to-join" className="menu-link">How to join</a>
                 <a href="#team" className="menu-link">Team</a>
