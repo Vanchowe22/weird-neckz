@@ -123,14 +123,14 @@ const Home = () => {
                         <h2>Roadmap</h2>
                         <p className="slide-up">The launch takes place in 3 rounds
                             With each round the price goes higher
-                            <br />Round 1 (pre-sale) – Available 700 whitelist spots (3 NFTs per spot) – 0,08 eth
-                            <br />Round 2 ( early public sale) – Available 4000 NFTs – 0.1 eth
+                            <br />Round 1 (pre-sale) – Available 700 whitelist spots (3 NFTs per spot) – 0,08 eth.
+                            <br />Round 2 ( early public sale) – Available 4000 NFTs – 0.1 eth.
                             <br />Round 3 ( late public sale ) – Available 3900 NFTs – 0.15 eth.
                         </p>
                     </div>
                     <div className="content-wrapper">
                         <h2>25%</h2>
-                        <p className="slide-up">At the quarter mark special raffles will be held available to all WeirdNeckz holders. Multiple big prizes will be given away. A 25 NFT giveaway will also be available to non-holders</p>
+                        <p className="slide-up">At the quarter mark special raffles will be held available to all WeirdNeckz holders. Multiple big prizes will be given away. A 25 NFT giveaway will also be available to non-holders.</p>
                     </div>
                     <div className="content-wrapper">
                         <h2>50%</h2>
@@ -146,16 +146,16 @@ const Home = () => {
                     </div>
                     <div className="content-wrapper">
                         <h2>100%</h2>
-                        <p className="slide-up">We will give away a *********** to a chosen by a raffle NFT holder and also announce our 4k 3D project</p>
+                        <p className="slide-up">We will give away a *********** to a chosen by a raffle NFT holder and also announce our 4k 3D project.</p>
                     </div>
-                    <h2 className="middle-title">Current owners will be able to mint 3d pieces 1:1 based on nfts owned</h2>
+                    <h2 className="middle-title">Current owners will be able to mint 3d pieces 1:1 based on nfts owned.</h2>
                     <div className="content-wrapper">
                         <h2>25%</h2>
-                        <p className="slide-up">We will announce our P2E game and start giving holders 3d files that they can use as full fledged avatars in the meta verse</p>
+                        <p className="slide-up">We will announce our P2E game and start giving holders 3d files that they can use as full fledged avatars in the meta verse.</p>
                     </div>
                     <div className="content-wrapper">
                         <h2>50%</h2>
-                        <p className="slide-up">A major giveaway will be made including announcements<br /> for future projects and whitelist spots</p>
+                        <p className="slide-up">A major giveaway will be made including<br /> announcements for future projects and whitelist spots.</p>
                     </div>
                 </section>
 
