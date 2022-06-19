@@ -155,7 +155,7 @@ const Home = () => {
                     </div>
                     <div className="content-wrapper">
                         <h2>50%</h2>
-                        <p className="slide-up">A major giveaway will be made including<br /> announcements for future projects and whitelist spots.</p>
+                        <p className="slide-up">A major giveaway will be made including announcements for future<br /> projects and whitelist spots.</p>
                     </div>
                 </section>
 

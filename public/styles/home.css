@@ -323,3 +323,13 @@
     margin-left: 208px;
     color: white;
 }
+@media (max-width: 1780px) {
+    .section-4 {
+        background-size: 1000px 3000px;
+    }  
+}
+@media (max-width: 1280px) {
+    .section-4 {
+        background-size: 700px 3600px;
+    }  
+}
