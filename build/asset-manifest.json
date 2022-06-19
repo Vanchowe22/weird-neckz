@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://weirdneckz.com/static/css/main.479b1d8c.css",
+    "main.js": "https://weirdneckz.com/static/js/main.c6b6730d.js",
+    "static/js/787.9ab295b2.chunk.js": "https://weirdneckz.com/static/js/787.9ab295b2.chunk.js",
+    "index.html": "https://weirdneckz.com/index.html",
+    "main.479b1d8c.css.map": "https://weirdneckz.com/static/css/main.479b1d8c.css.map",
+    "main.c6b6730d.js.map": "https://weirdneckz.com/static/js/main.c6b6730d.js.map",
+    "787.9ab295b2.chunk.js.map": "https://weirdneckz.com/static/js/787.9ab295b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.479b1d8c.css",
+    "static/js/main.c6b6730d.js"
+  ]
+}

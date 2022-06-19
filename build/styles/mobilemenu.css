@@ -1,0 +1,220 @@
+.mobile-container {
+    display: none;
+    margin: auto;
+    background-color: #555;
+    color: white;
+    border-radius: 10px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+}
+
+.topnav #myLinks {
+    display: block;
+}
+
+.topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    display: block;
+}
+
+.topnav a.icon {
+    background: #25DAC5;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #431A66;
+    color: white;
+}
+
+@media (max-width: 1100px) {
+    .mobile-container {
+        display: block;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .section-1 {
+        padding: 0;
+        background: white;
+    }
+
+    .btn-join {
+        font-size: 23px !important;
+    }
+
+    .btn-login {
+        font-size: 21px !important;
+        padding: 20px 57px !important;
+    }
+
+    .section-1 .title-wrapper {
+        color: #333;
+        font-size: 48px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-logo {
+        width: 35px;
+    }
+
+    .countdown-timer {
+        font-size: 54px;
+        text-align: center;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 92px;
+    }
+
+    .section-2 .heading {
+        padding: 32px 16px;
+        font-size: 32px;
+    }
+
+    .section-2 .description {
+        padding: 0;
+    }
+
+    .section-3 {
+        padding-top: 32px;
+    }
+
+    .section-4 {
+        padding: 74px 0;
+        background: #f8f8f8;
+    }
+
+    .section-4 p {
+        padding: 0 32px;
+    }
+
+    .section-4 .title-wrapper h2 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .section-4 .content-wrapper h2 {
+        text-align: center;
+        font-size: 42px;
+    }
+
+    .section-4 .middle-title {
+        padding: 32px 0 0;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .section-5 .actions-wrapper {
+        flex-direction: column;
+        padding: 32px 0;
+    }
+
+    .section-5 .actions-wrapper .btn-transparent,
+    .section-5 .actions-wrapper .btn-green {
+        margin: 32px 0 0;
+        font-size: 16px;
+    }
+
+    .section-5 .actions-wrapper h2 {
+        font-size: 42px;
+    }
+
+    .section-6 {
+        display: none;
+    }
+
+    .section-7 .faq-title {
+        padding-top: 50px;
+    }
+
+    .section-7 .content-wrapper {
+        padding: 0;
+    }
+
+    .section-7 .content-wrapper .row-1,
+    .section-7 .content-wrapper .row-2 {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .section-7 .content {
+        width: 100%;
+        padding-top: 16px;
+    }
+
+    .section-7 .content p {
+        padding-top: 8px;
+    }
+
+    .section-8 {
+        padding: 32px 0 0;
+    }
+
+    .section-8 .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-8 .footer-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-8 a {
+        padding: 16px 0 0;
+    }
+
+    .section-8 .footer-wrapper .logo {
+        padding: 64px 0;
+    }
+
+    .section-8 .social-links-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .section-8 .social-links-wrapper img {
+        padding: 0;
+    }
+
+    .section-8 .copyright-wrapper {
+        padding: 32px 0;
+    }
+
+    .swiper-button-next {
+        display: none !important;
+    }
+
+    .swiper-button-prev {
+        display: none !important;
+    }
+    .how-to-timer {
+        margin: 32px 0 0;
+        color: white;
+    }
+}
